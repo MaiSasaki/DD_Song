@@ -28,6 +28,6 @@ export default {
 </script>
 <style scoped>
 .data-search-box {
-  background-color: #ffffff;
+  background-color: blue;
 }
 </style>
