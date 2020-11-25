@@ -91,7 +91,7 @@ export default {
   margin-bottom: 10px;
   color: #3f312b;
 }
-input[type="text"] {
+input[type="text"]{
   border-radius: 5px;
   border: 0.3px solid;
   border-color: #EE8D72;

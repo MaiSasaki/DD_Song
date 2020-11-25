@@ -1,6 +1,7 @@
 <template>
   <div class="list">
     <div v-if="users.length != 0">
+      <SearchDataListBtn />
       <div class="area northUsers" v-if="northUsers.length != 0">
         <h1 class="data-list-title">North</h1>
         <div class="userData" v-for="user in northUsers" :key="user.id">
@@ -64,6 +65,7 @@
 </template>
 
 <script>
+import SearchDataListBtn from "./SearchDataListBtn";
 import DataListDelBtn from "./DataListDelBtn";
 import DataListUpdBtn from "./DataListUpdBtn";
 import { mapState } from "vuex";
@@ -72,6 +74,7 @@ export default {
   components: {
     DataListDelBtn,
     DataListUpdBtn,
+    SearchDataListBtn,
   },
   computed: {
     //ここでusers定義すればその後のやつはストアから呼び出さなくてもusersでいける(methodsでも使える)
@@ -95,20 +98,19 @@ export default {
 
 <style>
 .area {
-  background-color: #F0EBEB;
-  border: 3.5px solid #EE8D72;
+  background-color: #f0ebeb;
+  border: 3.5px solid #ee8d72;
   position: relative;
   padding: 20px;
   margin: 35px;
   border-radius: 8px;
   display: inline-block;
-
 }
 .data-list-title {
   position: absolute;
   top: -20px;
   left: 30px;
-  background-color: #F0EBEB;
+  background-color: #f0ebeb;
   padding: 0 15px;
 }
 .no_list {
