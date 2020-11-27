@@ -1,7 +1,6 @@
 <template>
   <div class="list">
     <div v-if="users.length != 0">
-      <SearchDataListBtn />
       <div class="area northUsers" v-if="northUsers.length != 0">
         <h1 class="data-list-title">North</h1>
         <div class="userData" v-for="user in northUsers" :key="user.id">
@@ -23,7 +22,7 @@
           <p>song:{{ user.song }}</p>
           <p>move:{{ user.move }}</p>
           <div class="button-wrapper">
-            <DataListUpdBtn class="list-button" :pass-user-data="user" />
+            <DataListUpdBtn class="list-button" :passUserData="user" />
             <DataListDelBtn class="list-button" :userId="user.id" />
           </div>
         </div>
@@ -36,7 +35,7 @@
           <p>song:{{ user.song }}</p>
           <p>move:{{ user.move }}</p>
           <div class="button-wrapper">
-            <DataListUpdBtn class="list-button" :pass-user-data="user" />
+            <DataListUpdBtn class="list-button" :passUserData="user" />
             <DataListDelBtn class="list-button" :userId="user.id" />
           </div>
         </div>
@@ -49,7 +48,7 @@
           <p>song:{{ user.song }}</p>
           <p>move:{{ user.move }}</p>
           <div class="button-wrapper">
-            <DataListUpdBtn class="list-button" :pass-user-data="user" />
+            <DataListUpdBtn class="list-button" :passUserData="user" />
             <DataListDelBtn class="list-button" :userId="user.id" />
           </div>
         </div>
@@ -65,7 +64,6 @@
 </template>
 
 <script>
-import SearchDataListBtn from "./SearchDataListBtn";
 import DataListDelBtn from "./DataListDelBtn";
 import DataListUpdBtn from "./DataListUpdBtn";
 import { mapState } from "vuex";
@@ -74,7 +72,6 @@ export default {
   components: {
     DataListDelBtn,
     DataListUpdBtn,
-    SearchDataListBtn,
   },
   computed: {
     //ここでusers定義すればその後のやつはストアから呼び出さなくてもusersでいける(methodsでも使える)
