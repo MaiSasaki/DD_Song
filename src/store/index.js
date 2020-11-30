@@ -45,7 +45,7 @@ export default createStore({
     updData({ commit }, user) {
       commit('updData', user);
     },
-    setSearchTitle({ commit}, searchTitle){
+    setSearchTitle({ commit }, searchTitle) {
       commit('pushSearchTitle', searchTitle);
     }
   }
