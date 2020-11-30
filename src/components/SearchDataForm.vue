@@ -4,13 +4,13 @@
       <input
         class="data-search-box"
         type="text"
-        placeholder="Search Song Name"
+        placeholder="Search SongTitle"
         v-model="searchTitle"
-        @input="searchSong"
+        @input="setSearchTitle"
       />
-      <button @click="searchData">
+      <p @click="searchData">
         <i class="fas fa-search"></i>
-      </button>
+      </p>
     </div>
   </div>
 </template>
@@ -18,15 +18,16 @@
 <script>
 import { mapState } from "vuex";
 export default {
-  props: ["title"],
   data: () => ({
-    songTitle: this.title 
+    searchTitle: "",
   }),
   computed: {
     ...mapState(["users"]),
-    // searchData() {
-    //   return this.users.filter((user) => user.song === this.searchSong);
-    // },
+  },
+  methods: {
+    setSearchTitle() {
+      this.$store.dispatch("setSearchTitle", this.searchTitle);
+    },
   },
 };
 </script>

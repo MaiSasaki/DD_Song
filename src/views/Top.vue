@@ -1,10 +1,9 @@
 <template>
   <div class="top">
     <Header />
-    <SearchDataListForm :title="searchSongTitle" />
+    <SearchDataForm />
     <!--SearchDataListに検索ワードがあったらsearchDataListを表示-->
-    <!-- <component :is="currentView"></component> -->
-    <DataList />
+    <component :is="currentList"></component>
     <button class="link-to-add" @click="$router.push('add')">
       <i
         style="margin-left: 4px; font-size: 24px"
@@ -16,29 +15,26 @@
 
 <script>
 import Header from "../components/Header.vue";
-import SearchDataListForm from "../components/SearchDataListForm.vue";
+import SearchDataForm from "../components/SearchDataForm.vue";
 import DataList from "../components/DataList.vue";
-// import SearchDataList from "../components/SearchDataList.vue";
+import SearchDataList from "../components/SearchDataList.vue";
 import { mapState } from "vuex";
 
 export default {
-  //コンポーネントはdataは関数
   components: {
     Header,
-    SearchDataListForm,
+    SearchDataForm,
     DataList,
-    // SearchDataList,
+    SearchDataList,
   },
-  data: () => ({
-    searchSongTitle: "",
-  }),
+  //コンポーネントはdataは関数
   computed: {
-    ...mapState(["users"]),
-    currentView() {
-      if (this.users.length != 0) {
+    ...mapState(["users", "searchTitle"]),
+    currentList() {
+      if (this.searchTitle.length == 0) {
         return "DataList";
       } else {
-        return "";
+        return "SearchDataList";
       }
     },
   },

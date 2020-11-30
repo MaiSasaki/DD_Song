@@ -1,8 +1,8 @@
 <template>
   <div>
-    <button class="delete-data" @click="deleteData">
+    <p class="delete-data" @click="deleteData">
       <i class="fas fa-trash-alt"></i>
-    </button>
+    </p>
   </div>
 </template>
 

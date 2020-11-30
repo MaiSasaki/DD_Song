@@ -4,7 +4,8 @@ import router from '../router'
 export default createStore({
   state: {
     users: [],
-    valiFlag: false
+    valiFlag: false,
+    searchTitle: ""
   },
   mutations: {
     pushData(state, user) {
@@ -26,6 +27,9 @@ export default createStore({
     },
     updData(state, user) {
       state.users.splice(user.id - 1, 1, user);
+    },
+    pushSearchTitle(state, searchTitle) {
+      state.searchTitle = searchTitle;
     }
   },
   actions: {
@@ -40,6 +44,9 @@ export default createStore({
     },
     updData({ commit }, user) {
       commit('updData', user);
+    },
+    setSearchTitle({ commit}, searchTitle){
+      commit('pushSearchTitle', searchTitle);
     }
   }
 })

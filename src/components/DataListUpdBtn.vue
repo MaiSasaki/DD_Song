@@ -1,8 +1,8 @@
 <template>
   <div>
-    <button class="update-data" @click="displayFlag = !displayFlag">
+    <p class="update-data" @click="displayFlag = !displayFlag">
       <i class="fas fa-pencil-alt"></i>
-    </button>
+    </p>
     <div v-show="displayFlag">
       <div class="overlay"></div>
       <div class="update-form_wrapper">
@@ -192,9 +192,10 @@ input:checked + label {
   border: none;
   outline: none;
 }
+.fas {
+  font-size: 20px;
+}
 .fa-pencil-alt {
   background-color: #ffffff;
-  /* border: none;
-  outline: none; */
 }
 </style>
