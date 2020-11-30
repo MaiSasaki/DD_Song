@@ -35,5 +35,10 @@ export default {
 .data-search-box {
   background-color: #ffffff;
   margin-top: 100px;
+  width: 250px;
+  height: 36px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
 }
 </style>

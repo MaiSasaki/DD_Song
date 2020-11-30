@@ -47,22 +47,22 @@
           <div class="items">
             <label>TeamName</label>
             <br />
-            <input type="text" required v-model="updUserData.team" />
+            <input type="text" required class="update-form" v-model="updUserData.team" />
           </div>
           <div class="items">
             <label>ArtistName</label>
             <br />
-            <input type="text" v-model="updUserData.artist" />
+            <input type="text" class="update-form" v-model="updUserData.artist" />
           </div>
           <div class="items">
             <label>SongTitle</label>
             <br />
-            <input type="text" v-model="updUserData.song" />
+            <input type="text" class="update-form" v-model="updUserData.song" />
           </div>
           <div class="items">
             <label>Move</label>
             <br />
-            <input type="text" v-model="updUserData.move" />
+            <input type="text" class="update-form" v-model="updUserData.move" />
           </div>
           <button
             class="submit-update-data"
@@ -135,7 +135,7 @@ export default {
   margin-bottom: 8px;
   color: #3f312b;
 }
-input[type="text"] {
+.update-form {
   border-radius: 5px;
   border: 0.3px solid;
   border-color: #EE8D72;
@@ -146,7 +146,7 @@ input[type="text"] {
   padding: 4px;
   outline: none;
 }
-input[type="text"]::placeholder {
+.update-form::placeholder {
   color: #ccc;
   font-size: 16px;
 }

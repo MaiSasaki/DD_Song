@@ -19,13 +19,19 @@
       <div class="items">
         <label>TeamName</label>
         <br />
-        <input type="text" v-model="user.team" placeholder="Enter TeamName" />
+        <input
+          type="text"
+          class="add-form"
+          v-model="user.team"
+          placeholder="Enter TeamName"
+        />
       </div>
       <div class="items">
         <label>ArtistName</label>
         <br />
         <input
           type="text"
+          class="add-form"
           v-model="user.artist"
           placeholder="Enter ArtistName"
         />
@@ -33,12 +39,22 @@
       <div class="items">
         <label>SongTitle</label>
         <br />
-        <input type="text" v-model="user.song" placeholder="Enter SongTitle" />
+        <input
+          type="text"
+          class="add-form"
+          v-model="user.song"
+          placeholder="Enter SongTitle"
+        />
       </div>
       <div class="items">
         <label>Move</label>
         <br />
-        <input type="text" v-model="user.move" placeholder="Enter Move" />
+        <input
+          type="text"
+          class="add-form"
+          v-model="user.move"
+          placeholder="Enter Move"
+        />
       </div>
       <button class="link-to-top" type="submit">Add</button>
     </form>
@@ -49,8 +65,8 @@
 import Header from "../components/Header.vue";
 
 export default {
-  components:{
-    Header
+  components: {
+    Header,
   },
   data: () => ({
     user: {
@@ -91,10 +107,10 @@ export default {
   margin-bottom: 10px;
   color: #3f312b;
 }
-input[type="text"]{
+.add-form {
   border-radius: 5px;
   border: 0.3px solid;
-  border-color: #EE8D72;
+  border-color: #ee8d72;
   width: 100%;
   height: 30px;
   margin-top: 8px;
@@ -102,7 +118,7 @@ input[type="text"]{
   padding: 4px;
   outline: none;
 }
-input[type="text"]::placeholder {
+.add-form::placeholder {
   color: #ccc;
   font-size: 16px;
 }
@@ -110,7 +126,7 @@ input[type="radio"] {
   margin: 8px;
 }
 .area-label {
-  border: 1.9px solid #EE8D72;
+  border: 1.9px solid #ee8d72;
   margin-right: 22px;
   margin-top: 8px;
   padding: 4px 9px;
@@ -123,7 +139,7 @@ input[type="radio"] {
 }
 input:checked + label {
   color: #fff;
-  background-color: #EE8D72;
+  background-color: #ee8d72;
 }
 .link-to-top {
   width: 70px;
@@ -131,16 +147,16 @@ input:checked + label {
   font-size: 15px;
   border-radius: 25px;
   background-color: #fff;
-  color: #EE8D72;
+  color: #ee8d72;
   font-weight: bold;
   display: block;
   margin: auto;
-  border: 2px solid #EE8D72;
+  border: 2px solid #ee8d72;
   outline: none;
   transition: 0.4s;
 }
 .link-to-top:hover {
-  background-color: #EE8D72;
+  background-color: #ee8d72;
   color: #fff;
   cursor: pointer;
 }
