@@ -1,8 +1,12 @@
 <template>
-  <header class="header">Double Dutch Song</header>
+  <header class="header" @click="$router.push('top')">Double Dutch Song</header>
 </template>
 <script>
-export default {};
+export default {
+  methods: {
+
+  }
+};
 </script>
 <style scoped>
 .header {

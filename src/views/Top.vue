@@ -1,7 +1,7 @@
 <template>
   <div class="top">
     <Header />
-    <SearchDataForm />
+    <SearchDataForm v-if="searchTitle =! 0"/>
     <!--SearchDataListに検索ワードがあったらsearchDataListを表示-->
     <component :is="currentList"></component>
     <button class="link-to-add" @click="$router.push('add')">

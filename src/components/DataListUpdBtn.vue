@@ -198,4 +198,7 @@ input:checked + label {
 .fa-pencil-alt {
   background-color: #ffffff;
 }
+.fa-pencil-alt:hover {
+  cursor: pointer;
+}
 </style>

@@ -33,4 +33,7 @@ export default {
   background-color: #ffffff;
   /* border: none; */
 }
+.fa-trash-alt:hover{
+  cursor: pointer;
+}
 </style>
