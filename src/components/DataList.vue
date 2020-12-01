@@ -146,7 +146,4 @@ export default {
   font-size: 10px;
   margin: 0px 5px;
 }
-.fas {
-  font-size: 1.4em;
-}
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="search-data-list">
-    <p>検索ワード： {{ searchTitle }}</p>
+    <p class="disp-search-word">Search word： {{ searchTitle }}</p>
     <div class="area" v-if="NorthSearchList.length != 0">
       <h1 class="search-list-title">North</h1>
       <div class="search-data" v-for="user in NorthSearchList" :key="user.id">
@@ -45,16 +45,24 @@ export default {
   computed: {
     ...mapState(["users", "searchTitle"]),
     NorthSearchList() {
-      return this.users.filter((user) => user.song === this.searchTitle && user.area === "North");
+      return this.users.filter(
+        (user) => user.song === this.searchTitle && user.area === "North"
+      );
     },
     EastSearchList() {
-      return this.users.filter((user) => user.song === this.searchTitle && user.area === "East");
+      return this.users.filter(
+        (user) => user.song === this.searchTitle && user.area === "East"
+      );
     },
     WestSearchList() {
-      return this.users.filter((user) => user.song === this.searchTitle && user.area === "West");
+      return this.users.filter(
+        (user) => user.song === this.searchTitle && user.area === "West"
+      );
     },
     SouthSearchList() {
-      return this.users.filter((user) => user.song === this.searchTitle && user.area === "South");
+      return this.users.filter(
+        (user) => user.song === this.searchTitle && user.area === "South"
+      );
     },
   },
 };
@@ -104,5 +112,8 @@ export default {
 }
 .fas {
   font-size: 1.4em;
+}
+.disp-search-word {
+  font-size: 20px;
 }
 </style>
